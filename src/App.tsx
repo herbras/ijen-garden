@@ -2,8 +2,20 @@ import { motion } from 'motion/react';
 import { ArrowUpRight, Leaf, MapPin, Phone, Sprout, Truck } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const WHATSAPP_NUMBER = "6281234567890";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Halo%20Ijen%20Garden%20Sedayu,%20saya%20ingin%20bertanya%20seputar%20layanan%20Anda.`;
+const WHATSAPP_NUMBER = "6285726034692";
+const WHATSAPP_MESSAGE = `*Halo, Ijen Garden Sedayu*
+
+Saya tertarik dengan layanan yang tersedia. Berikut detail permintaan saya:
+
+*Nama:*
+*Layanan yang diminati:*
+(Pembibitan Unggul / Edukasi Pertanian / Suplai Partai Besar)
+
+*Detail permintaan:*
+
+
+Mohon informasi lebih lanjut. Terima kasih.`;
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,6 +50,7 @@ export default function App() {
         <nav aria-label="Navigasi utama" className="hidden md:flex items-center gap-6 pl-5">
           <a href="#layanan" className="text-xs font-bold tracking-widest uppercase text-forest hover:text-leaf transition-colors">Layanan</a>
           <a href="#tentang" className="text-xs font-bold tracking-widest uppercase text-forest hover:text-leaf transition-colors">Tentang</a>
+          <a href="#lokasi" className="text-xs font-bold tracking-widest uppercase text-forest hover:text-leaf transition-colors">Lokasi</a>
         </nav>
 
         <a
@@ -299,6 +312,61 @@ export default function App() {
               </motion.div>
 
             </div>
+          </div>
+        </section>
+
+        {/* Map & Visit CTA */}
+        <section id="lokasi" aria-labelledby="lokasi-title" className="py-24 md:py-32 px-4 sm:px-8 max-w-[1400px] mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="h-1 w-12 bg-leaf" aria-hidden="true"></div>
+              <span className="text-sm font-bold tracking-[0.2em] uppercase text-leaf">Lokasi</span>
+              <div className="h-1 w-12 bg-leaf" aria-hidden="true"></div>
+            </div>
+            <h2 id="lokasi-title" className="font-serif text-4xl md:text-6xl text-forest leading-tight font-bold mb-4">
+              Ayo Berkunjung ke <span className="italic text-leaf">Kebun Kami.</span>
+            </h2>
+            <p className="text-lg md:text-2xl text-forest font-medium max-w-2xl mx-auto leading-relaxed">
+              Temui langsung kebun pembibitan kami di Desa Sedayu, Kabupaten Grobogan, Jawa Tengah.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="rounded-3xl overflow-hidden shadow-2xl border-4 border-leaf/20"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0!2d110.9506277!3d-6.9894788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTknMjIuMSJTIDExMMKwNTcnMDIuMyJF!5e0!3m2!1sid!2sid!4v1"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokasi Ijen Garden Sedayu di Google Maps"
+              className="w-full"
+            ></iframe>
+          </motion.div>
+
+          <div className="text-center mt-10">
+            <a
+              href="https://maps.app.goo.gl/Xmf3n9cxubkBUZRa9"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Buka lokasi Ijen Garden Sedayu di Google Maps"
+              className="inline-flex items-center justify-center gap-3 bg-forest text-white px-6 py-4 md:px-10 md:py-5 rounded-full text-base md:text-lg font-bold tracking-widest uppercase hover:bg-leaf transition-colors group shadow-xl w-full sm:w-auto"
+            >
+              <MapPin className="w-5 h-5 md:w-6 md:h-6" aria-hidden="true" />
+              <span>Buka di Google Maps</span>
+              <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
+            </a>
           </div>
         </section>
 
