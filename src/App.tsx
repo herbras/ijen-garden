@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowUpRight, Leaf, MapPin, Phone, Sprout, Truck, X, Play } from 'lucide-react';
+import { ArrowUpRight, BotMessageSquare, Cpu, Leaf, MapPin, Phone, Sprout, Truck, X, Play } from 'lucide-react';
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 const WHATSAPP_NUMBER = "6285726034692";
@@ -366,6 +366,64 @@ export default function App() {
               <div className="md:col-span-2 flex justify-start md:justify-center mt-4 md:mt-0">
                 <div className="bg-leaf text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg flex items-center gap-2 group-hover:bg-accent transition-colors shadow-md w-full md:w-auto justify-center">
                   <span>Pesan</span>
+                  <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6" aria-hidden="true" />
+                </div>
+              </div>
+            </motion.a>
+
+            <motion.a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              role="listitem"
+              aria-label="Konsultasi layanan IoT Smart Agriculture via WhatsApp"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="group grid md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-12 border-b-2 md:border-b-4 border-leaf/30 items-center hover:bg-surface transition-colors px-4 md:px-8 -mx-4 md:-mx-8 rounded-2xl md:rounded-3xl cursor-pointer"
+            >
+              <div className="md:col-span-2 font-serif text-5xl md:text-7xl font-bold text-leaf/30 group-hover:text-leaf transition-colors" aria-hidden="true">04</div>
+              <div className="md:col-span-4">
+                <h3 className="text-2xl md:text-4xl font-serif font-bold text-forest mb-3">IoT Smart Agriculture</h3>
+                <div className="flex items-center gap-2 text-xs md:text-sm tracking-widest uppercase text-leaf font-bold bg-leaf/10 inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full">
+                  <Cpu className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" /> Monitoring & Automasi
+                </div>
+              </div>
+              <div className="md:col-span-4 text-forest text-base md:text-xl font-medium leading-relaxed">
+                Solusi pertanian cerdas berbasis IoT untuk monitoring kelembaban tanah, suhu, irigasi otomatis, dan analitik data kebun secara real-time.
+              </div>
+              <div className="md:col-span-2 flex justify-start md:justify-center mt-4 md:mt-0">
+                <div className="bg-leaf text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg flex items-center gap-2 group-hover:bg-accent transition-colors shadow-md w-full md:w-auto justify-center">
+                  <span>Konsultasi</span>
+                  <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6" aria-hidden="true" />
+                </div>
+              </div>
+            </motion.a>
+
+            <motion.a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              role="listitem"
+              aria-label="Konsultasi layanan AI Asisten Pertanian via WhatsApp"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="group grid md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-12 border-b-2 md:border-b-4 border-leaf/30 items-center hover:bg-surface transition-colors px-4 md:px-8 -mx-4 md:-mx-8 rounded-2xl md:rounded-3xl cursor-pointer"
+            >
+              <div className="md:col-span-2 font-serif text-5xl md:text-7xl font-bold text-leaf/30 group-hover:text-leaf transition-colors" aria-hidden="true">05</div>
+              <div className="md:col-span-4">
+                <h3 className="text-2xl md:text-4xl font-serif font-bold text-forest mb-3">AI Asisten Pertanian</h3>
+                <div className="flex items-center gap-2 text-xs md:text-sm tracking-widest uppercase text-leaf font-bold bg-leaf/10 inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full">
+                  <BotMessageSquare className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" /> Cerdas & Prediktif
+                </div>
+              </div>
+              <div className="md:col-span-4 text-forest text-base md:text-xl font-medium leading-relaxed">
+                Asisten cerdas berbasis AI untuk deteksi hama, prediksi panen, rekomendasi pemupukan, dan monitoring kesehatan tanaman secara otomatis.
+              </div>
+              <div className="md:col-span-2 flex justify-start md:justify-center mt-4 md:mt-0">
+                <div className="bg-leaf text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg flex items-center gap-2 group-hover:bg-accent transition-colors shadow-md w-full md:w-auto justify-center">
+                  <span>Konsultasi</span>
                   <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6" aria-hidden="true" />
                 </div>
               </div>
